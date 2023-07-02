@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
 import { cn } from '@bem-react/classname';
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { ProductItem } from '../components/ProductItem';
 import { ApplicationState, productsLoad } from '../store';
@@ -18,7 +18,7 @@ export const Catalog: React.FC = () => {
 
     const items: React.ReactNode = products ?
         products.map(p => (
-            <div key={p.id} data-testid={p.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div key={p.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
                 <ProductItem product={p} />
             </div>
         )) :
